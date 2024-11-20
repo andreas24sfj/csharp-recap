@@ -10,4 +10,9 @@ var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
+app.MapGet("/election/nominee", () => 
+{
+    return election.ListNominees();
+});
+
 app.Run();
